@@ -22,7 +22,7 @@ function scrambleAlphabet(alphabet) {
 
 	let finalScrambledIndex = alphabetIndex
 
-	// first run through the 3 rotors
+	// first run through the rotors
 	for (let rIndex = 0; rIndex < rotors.length; rIndex++) {
 		let rotorLetter = rotors[rIndex].rotor[finalScrambledIndex]
 		let mappedLetter = rotors[rIndex].crossConnections[rotorLetter]
@@ -34,7 +34,7 @@ function scrambleAlphabet(alphabet) {
 
 	finalScrambledIndex = rotors[rotors.length - 1].rotor.indexOf(reflectedLetter)
 
-	// run back through the 3 rotors in opposite direction
+	// run back through the rotors in opposite direction
 	for (let rIndex = rotors.length - 1; rIndex >= 0; rIndex--) {
 		let rotorLetter = rotors[rIndex].rotor[finalScrambledIndex]
 		let mappedLetter = rotors[rIndex].crossConnections[rotorLetter]
